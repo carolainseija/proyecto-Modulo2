@@ -1,0 +1,42 @@
+.body {
+  background-color: rgba(37, 218, 37, 0.02);
+}
+
+.root {
+  width: 500px;
+  border: 20px violet !important;
+  background-color: rgba(212, 216, 201, 0.007);
+
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.rootTwo {
+  padding-bottom: 30px;
+  background-color: white;
+  margin-top: 30px;
+
+  border-color: tomato !important;
+}
+.paper {
+  height: 200px;
+  margin-top: 80px;
+}
+
+.grid {
+  height: 500px;
+  justify-content: "center";
+  text-align: "center";
+  
+  margin-top: 30px !important;
+}
+.box {
+}
+.centrar {
+  text-align: center;
+  justify-content: center;
+}
+.margin {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}

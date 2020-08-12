@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import {Button} from '@material-ui/core';
 
-function App() {
+function App () {
   return (
     <div>
      

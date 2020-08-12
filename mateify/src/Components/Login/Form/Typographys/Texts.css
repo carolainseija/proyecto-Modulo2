@@ -1,0 +1,33 @@
+.text-olvidado {
+  height: 12px;
+  left: 429px;
+  right: 465px;
+  top: calc(50% - 12px / 2 + 183px);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px !important;
+  line-height: 12px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  color: #009688;
+}
+
+.text-cuenta {
+  height: 16px;
+  left: 427px;
+  right: 467px;
+  top: calc(50% - 16px / 2 + 279px);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px !important;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  color: #c4c4c4;
+}
