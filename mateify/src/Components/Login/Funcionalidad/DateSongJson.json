@@ -1,0 +1,165 @@
+[{
+    "uuid": 1,
+    "name": "Maldición",
+    "album": "Parvadomus",
+    "duration": "3:04",
+    "artist": {
+        "uuid": "1",
+        "name": "Once Tiros",
+        "coverUrl": "https://seeklogo.com/images/O/once-tiros-logo-9B5F6C2437-seeklogo.com.png"
+    }
+},
+{
+    "uuid": 2,
+    "name": "Nos Dijimos Todo",
+    "album": "Imán",
+    "duration": "3:32",
+    "artist": {
+        "uuid": "1",
+        "name": "Once Tiros",
+        "coverUrl": "https://seeklogo.com/images/O/once-tiros-logo-9B5F6C2437-seeklogo.com.png"
+    }
+},
+{
+    "uuid": 3,
+    "name": "Bisturí",
+    "album": "Momento Extraño",
+    "duration": "3:41",
+    "artist": {
+        "uuid": "1",
+        "name": "Once Tiros",
+        "coverUrl": "https://seeklogo.com/images/O/once-tiros-logo-9B5F6C2437-seeklogo.com.png"
+    }
+},
+{
+    "uuid": 4,
+    "name": "La Calle Adicción",
+    "album": "Érase",
+    "duration": "3:13",
+    "artist": {
+        "uuid": "2",
+        "name": "La Vela Puerca",
+        "coverUrl": "https://pm1.narvii.com/6732/a285e05cd2b18bf8ca9543d55ebaeb34ed708183v2_00.jpg"
+    }
+},
+{
+    "uuid": 5,
+    "name": "La Hiedra",
+    "album": "Pasaje Salvo",
+    "duration": "2:52",
+    "artist": {
+        "uuid": "2",
+        "name": "La Vela Puerca",
+        "coverUrl": "https://pm1.narvii.com/6732/a285e05cd2b18bf8ca9543d55ebaeb34ed708183v2_00.jpg"
+    }
+},
+{
+    "uuid": 6,
+    "name": "Todo el Karma",
+    "album": "Piel y Hueso",
+    "duration": "3:29",
+    "artist": {
+        "uuid": "2",
+        "name": "La Vela Puerca",
+        "coverUrl": "https://pm1.narvii.com/6732/a285e05cd2b18bf8ca9543d55ebaeb34ed708183v2_00.jpg"
+    }
+},
+{
+    "uuid": 7,
+    "name": "Clara",
+    "album": "Este Fuerte Viento que Sopla",
+    "duration": "4:10",
+    "artist": {
+        "uuid": "3",
+        "name": "NTVG",
+        "coverUrl": "https://i.pinimg.com/originals/5d/ca/12/5dca12e17988e6fe434afd51962ded55.jpg"
+    }
+},
+{
+    "uuid": 8,
+    "name": "Verte Reír",
+    "album": "Aunque Cueste Ver el Sol",
+    "duration": "",
+    "artist": {
+        "uuid": "3",
+        "name": "NTVG",
+        "coverUrl": "https://i.pinimg.com/originals/5d/ca/12/5dca12e17988e6fe434afd51962ded55.jpg"
+    }
+},
+{
+    "uuid": 9,
+    "name": "Fuera de Control",
+    "album": "Todo Es Tan Inflamable",
+    "duration": "3:30",
+    "artist": {
+        "uuid": "3",
+        "name": "NTVG",
+        "coverUrl": "https://i.pinimg.com/originals/5d/ca/12/5dca12e17988e6fe434afd51962ded55.jpg"
+    }
+},
+{
+    "uuid": 10,
+    "name": "Bipolar",
+    "album": "Bipolar",
+    "duration": "4:08",
+    "artist": {
+        "uuid": "4",
+        "name": "El Cuarteto de Nos",
+        "coverUrl": "https://pm1.narvii.com/6481/7a44d01c9e98cceaa9f6f37ee9fa92a38760a4da_hq.jpg"
+    }
+},
+{
+    "uuid": 11,
+    "name": "Buen Día Benito",
+    "album": "Porfiado",
+    "duration": "3:50",
+    "artist": {
+        "uuid": "4",
+        "name": "El Cuarteto de Nos",
+        "coverUrl": "https://pm1.narvii.com/6481/7a44d01c9e98cceaa9f6f37ee9fa92a38760a4da_hq.jpg"
+    }
+},
+{
+    "uuid": 12,
+    "name": "El Rey y el As",
+    "album": "Apocalipsis Zombie",
+    "duration": "4:03",
+    "artist": {
+        "uuid": "4",
+        "name": "El Cuarteto de Nos",
+        "coverUrl": "https://pm1.narvii.com/6481/7a44d01c9e98cceaa9f6f37ee9fa92a38760a4da_hq.jpg"
+    }
+},
+{
+    "uuid": 13,
+    "name": "Glu Glu",
+    "album": "Se Está Complicando",
+    "duration": "4:20",
+    "artist": {
+        "uuid": "5",
+        "name": "Cuatro Pesos de Propina",
+        "coverUrl": "https://pbs.twimg.com/profile_images/1081916710528135169/z59H1ufO.jpg"
+    }
+},
+{
+    "uuid": 14,
+    "name": "Mi Revolución",
+    "album": "Surcando",
+    "duration": "4:40",
+    "artist": {
+        "uuid": "5",
+        "name": "Cuatro Pesos de Propina",
+        "coverUrl": "https://pbs.twimg.com/profile_images/1081916710528135169/z59H1ufO.jpg"
+    }
+},
+{
+    "uuid": 15,
+    "name": "Llegó la hora",
+    "album": "Juan",
+    "duration": "4:04",
+    "artist": {
+        "uuid": "5",
+        "name": "Cuatro Pesos de Propina",
+        "coverUrl": "https://pbs.twimg.com/profile_images/1081916710528135169/z59H1ufO.jpg"
+    }
+}]
