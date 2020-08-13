@@ -1,8 +1,11 @@
-import React from "react";
+import React from 'react';
+import {IconSecurity} from '../Components/Icon/IconSecurity'
 
 export const PlaylistNoLogin = () => {
-  return (
-      <h1>kjnfkjfd</h1>
-  )
-};
-
+    return (
+        <div>
+  <h1>jhbjhf</h1>
+        </div>
+       
+    )
+}

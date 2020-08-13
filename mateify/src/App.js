@@ -7,6 +7,7 @@ import {Login} from './pages/Login';
 import {CreatorPlayList} from './pages/CreatorPlayList';
 import {PlaylistNoLogin} from './pages/PlaylistNoLogin';
 
+
 export const App = () => {
   return (
     <Router>
@@ -18,7 +19,7 @@ export const App = () => {
           <Router path="/PlaylistNoLogin">
           <PlaylistNoLogin />  
           </Router>
-          <Route path="/PlayList">
+          <Route path="/CreatePlayList">
             <CreatorPlayList />
           </Route>
           <Route path="/">
@@ -30,4 +31,3 @@ export const App = () => {
   );
 };
 
-export default App;
