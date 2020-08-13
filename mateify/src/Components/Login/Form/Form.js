@@ -9,9 +9,32 @@ import { FormValidation } from "../Form/FormValidation";
 import { Texts } from "./Typographys/Texts";
 
 import LockIcon from '@material-ui/icons/Lock';
+import { lime } from '@material-ui/core/colors';
+import { createMuiTheme } from '@material-ui/core/styles';
 
 
 export const Form = (props) => {
+
+  const theme = createMuiTheme({
+    palette: {
+      primary: {
+        light: '#757ce8',
+        main: '#3f50b5',
+        dark: '#002884',
+        contrastText: '#fff',
+      },
+      secondary: {
+        light: 'FFFFFF',
+        main: '#f44336',
+        dark: '#ba000d',
+        contrastText: '#000',
+      },
+      white: {
+        color: "white",
+      },
+    },
+  });
+
   return (
     <div className="centrar">
       <Box border={0} className="boxx" display="flex" justifyContent="center">
@@ -19,7 +42,9 @@ export const Form = (props) => {
           <div className="ingresar ">
           <Paper className="paper ">
             <div className="containerIcon">
-            <LockIcon color="secundary" />
+            <LockIcon 
+            color="primary"
+            style={{ fontSize: 40 }} />
             </div>
 
             
