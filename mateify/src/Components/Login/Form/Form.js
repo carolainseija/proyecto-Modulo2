@@ -3,9 +3,13 @@ import React from "react";
 import "../Form/Form.css";
 import { ButtonRegister } from "../Form/Buttons/ButtonRegister";
 
+
 import { Paper, Input, Grid, Box, Avatar } from "@material-ui/core";
 import { FormValidation } from "../Form/FormValidation";
 import { Texts } from "./Typographys/Texts";
+
+import LockIcon from '@material-ui/icons/Lock';
+
 
 export const Form = (props) => {
   return (
@@ -14,7 +18,11 @@ export const Form = (props) => {
         <Grid item xs={10} className="grid">
           <div className="ingresar ">
           <Paper className="paper ">
-            <Avatar alt="selena " src="./Components/images/images.png" />
+            <div className="containerIcon">
+            <LockIcon color="secundary" />
+            </div>
+
+            
             <Texts text="Ingresar" />
           
 
