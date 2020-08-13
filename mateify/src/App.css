@@ -1,0 +1,21 @@
+.root {
+  width: 500px;
+  border: 20px violet !important;
+  background-color: rgba(212, 216, 201, 0.007);
+  padding: 5px;
+  margin-bottom: 10px;
+}
+.centrar {
+  text-align: center;
+  justify-content: center;
+}
+.btn {
+  text-align: center;
+  justify-content: center;
+  background-color: #f50057 !important;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 4px;
+  width: 400px;
+  height: 40px;
+  font-size: 15px;
+}

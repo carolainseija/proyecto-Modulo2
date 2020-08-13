@@ -4,56 +4,48 @@ import "../Form/Form.css";
 import { ButtonRegister } from "../Form/Buttons/ButtonRegister";
 
 import { Paper, Input, Grid, Box, Avatar } from "@material-ui/core";
-import { ButtonLogin } from "./Buttons/ButtonLogin";
+import { FormValidation } from "../Form/FormValidation";
 import { Texts } from "./Typographys/Texts";
 
 export const Form = (props) => {
   return (
     <div className="centrar">
-      <Box border={1} className="boxx" display="flex" justifyContent="center">
-        <Grid item xs={8} className="grid">
+      <Box border={0} className="boxx" display="flex" justifyContent="center">
+        <Grid item xs={10} className="grid">
           <div className="ingresar ">
+          <Paper className="paper ">
             <Avatar alt="selena " src="./Components/images/images.png" />
             <Texts text="Ingresar" />
-          </div>
+          
 
-          <div>
-            <Paper className="paper ">
-              <form className="rootTwo" noValidate autoComplete="on">
-                <Input
-                  className="root"
-                  placeholder="Correo Electronico"
-                  type="email"
+          
+            <form className="rootTwo" noValidate autoComplete="on">
+              <div className="centrar">
+                <FormValidation />
+
+                <Texts
+                  text="¿HAS OLVIDADO LA CONTRASEÑA?"
+                  class="text-olvidado centrar margin"
                 />
-                <Input
-                  className="root"
-                  placeholder="Contraseña"
-                  type="password"
+
+   
+   <div className="contenedorBtnQuestion">
+              <Texts
+                  text="¿NO TIENES CUENTA?"
+                  class="text-cuenta centrar margin"
                 />
-                <div className="centrar">
-                  <ButtonLogin
-                    textButtonLogin="COMENZAR A CREAR PLALIST"
-                    class="centrar"
-                  />
-
-                  <Texts
-                    text="¿HAS OLVIDADO LA CONTRASEÑA?"
-                    class="text-olvidado centrar margin"
-                  />
-                </div>
-              </form>
-            </Paper>
-          </div>
-          <div className="centrar margin">
-            <Texts
-              text="¿NO TIENES CUENTA?"
-              class="text-cuenta centrar margin"
-            />
-
-            <ButtonRegister
-              descriptionButton="Registrate"
-              className="btn-register centar margin "
-            />
+              </div>
+<div className="contenedorBtnQuestion">
+<ButtonRegister
+                  descriptionButton="Registrate"
+                  className="btn-register centar margin "
+                />
+</div>
+   
+              
+              </div>
+            </form>
+          </Paper>
           </div>
         </Grid>
       </Box>
