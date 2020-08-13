@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import About from "./pages/About";
 
-import {Login} from './Components/Login/Login';
-import {CreatorPlayList} from './Components/PlayList/CreatorPlayList';
+import {Login} from './pages/Login';
+import {CreatorPlayList} from './pages/CreatorPlayList';
 import {PlaylistNoLogin} from './pages/PlaylistNoLogin';
 
 export const App = () => {

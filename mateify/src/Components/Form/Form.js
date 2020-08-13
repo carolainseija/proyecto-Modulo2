@@ -1,12 +1,12 @@
 import React from "react";
 
+import { ButtonRegister } from "../Buttons/ButtonRegister";
 import "../Form/Form.css";
-import { ButtonRegister } from "../Form/Buttons/ButtonRegister";
 
 
 import { Paper, Input, Grid, Box, Avatar } from "@material-ui/core";
 import { FormValidation } from "../Form/FormValidation";
-import { Texts } from "./Typographys/Texts";
+import { Texts } from "../Typographys/Texts";
 
 import LockIcon from '@material-ui/icons/Lock';
 import { lime } from '@material-ui/core/colors';
