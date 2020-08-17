@@ -7,7 +7,6 @@ export const NavBar = (props) => {
     <div className={props.class}>
       <AppBar className="rootNavBar" position="sticky">
         <Toolbar className="logo AppBar__toolbar">
-    
           <Typography variant="h4">{props.nameLogo}</Typography>
         </Toolbar>
       </AppBar>
