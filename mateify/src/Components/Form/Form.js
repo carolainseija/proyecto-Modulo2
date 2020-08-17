@@ -42,9 +42,7 @@ export const Form = (props) => {
           <div className="ingresar ">
           <Paper className="paper ">
             <div className="containerIcon">
-            <LockIcon 
-            color="primary"
-            style={{ fontSize: 40 }} />
+           
             </div>
 
             

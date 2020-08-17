@@ -4,4 +4,9 @@
   justify-content: "center";
 }
 .logo {
+  justify-content: center;
 }
+.logo::before {
+  content: url('../../Images/LogoSoloBlancoFondoTransparente\ 1.png');
+}
+

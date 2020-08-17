@@ -39,3 +39,7 @@
   border-radius: 50%;
   background-color: #f50057 ;
 }
+
+.containerIcon::before {
+  content: url('../../Images/image\ 1.png');
+}

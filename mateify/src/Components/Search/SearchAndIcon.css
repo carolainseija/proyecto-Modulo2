@@ -1,0 +1,25 @@
+.search {
+    position: relative;
+    border-Radius: 50px;
+    background-Color: black;
+  
+    margin-Right: 2px;
+    margin-Left: 0;
+    width: 100%;
+ 
+  }
+  .searchIcon {
+    padding: 2px;
+    height: 100%;
+    position: absolute;
+    pointer-Events: none;
+    display: flex;
+    align-items: center;
+    justify-Content: center;
+  }
+  .search:hover {
+   background-color: white;
+  }
+  .inputProps {
+      border: black;
+  }

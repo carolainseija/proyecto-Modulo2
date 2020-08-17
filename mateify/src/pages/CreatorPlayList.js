@@ -1,7 +1,21 @@
 import React from 'react';
+import {NavBar} from '../Components/NavBar/NavBar';
 
-export const CreatorPlayList = () => {
+
+import {SearchAndIcon} from '../Components/Search/SearcAndIcon';
+import {TableSimple} from '../Components/Table/TableSimple';
+
+
+export const CreatorPlayList = (props) => {
     return (
-        <h1>nueva pag</h1>
+        <div>
+             <NavBar
+       nameLogo="Mateify" />
+
+           <SearchAndIcon />
+
+           <TableSimple />
+        </div>
+      
     )
 }
