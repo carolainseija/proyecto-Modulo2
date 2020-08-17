@@ -1,16 +1,20 @@
 import React from "react";
-import { Typography, Box, Card, Toolbar } from "@material-ui/core";
+import { Typography, Box, Card, Toolbar,Paper } from "@material-ui/core";
+import {NavBar} from '../Components/NavBar/NavBar';
+import {TheLogo} from '../Images/TheLogo';
+import '.././pages/PlaylistNoLogin.css';
+import { CardNoLogin } from "../Components/Cards/CardNoLogin";
 
 export const PlaylistNoLogin = () => {
   return (
     <div>
-      <Card>
-        <Box>
-          <Typography className="Logo-security" variant="h4" color="initial">
-            Mmm... algo no salió bien
-          </Typography>
-        </Box>
-      </Card>
+     <NavBar nameLogo="Mateify" />
+   <div className="Card">
+   <CardNoLogin />  
+   </div>
+     
+         
+       
     </div>
   );
 };
