@@ -3,9 +3,14 @@ import "../Form/FormValidation.css";
 import { Button, IconButton, Input } from "@material-ui/core";
 //importo el json para filtrar
 import DateUserJson from '../Funcionalidad/DateUserJson.json';
+import { BrowserRouter as Router,useHistory} from "react-router-dom";
+import {PlaylistNoLogin} from '../../Components/PagesCondicional/PlaylistNoLogin';
+
 
 //const principal que abarca todo con funcion flecha
 export const FormValidation = (props) => {
+
+  const history = useHistory();
   
   //states iniciados "vacios" para que no haya nada en los inputs
   const [valorDelInput, setValorDelInput] = useState("");
@@ -34,12 +39,14 @@ const mostrarTextoIngresadocontraseña = (evento) => {
     const FilterUser = DateUserJson.filter(chequeaUsuarios);
     console.log(FilterUser);
     if (FilterUser.length > 0){
-      alert("usuario correcto");
+      history.push(`/CreatePlayList/`)
     }else {
-      alert("no");
+      history.push(`/PlaylistNoLogin/`)
     }
   }
 
+
+  
 
   return (
     <div>
