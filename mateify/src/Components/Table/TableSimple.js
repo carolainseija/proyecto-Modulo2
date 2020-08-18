@@ -33,16 +33,23 @@ export const TableSimple = (props) =>{
     <TableContainer component={Paper}>
       <Table className={classes.table} size="small" aria-label="a dense table">
         <TableHead>
+          {props.TitleHeadTable}
+        </TableHead>
+        <TableHead>
           <TableRow>
-            <TableCell>Dessert (100g serving)</TableCell>
-            <TableCell align="right">Nombre</TableCell>
-            <TableCell align="right">Fat&nbsp;(g)</TableCell>
-            <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-            <TableCell align="right">Protein&nbsp;(g)</TableCell>
+            <TableCell>{props.descriptionOne}</TableCell>
+            <TableCell align="center">{props.descriptionTwo}</TableCell>
+            <TableCell align="center">{props.descriptionThree}</TableCell>
+            <TableCell align="center">{props.descriptionFour}</TableCell>
+            <TableCell>
+            {props.descriptionFive}
+          </TableCell>
+          <TableCell>{props.descriptionSix}</TableCell>
           </TableRow>
+         
         </TableHead>
         <TableBody>
-        No hay resultados: utiliza la barra de búsqueda para encontrar canciones
+        {props.descriptionBodyTable}
             <TableRow >
               <TableCell component="th" scope="row">
              {PaymentResponse}
