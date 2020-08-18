@@ -3,7 +3,7 @@ import { Typography, Box, Card, Toolbar, Paper } from "@material-ui/core";
 import LockIcon from "@material-ui/icons/Lock";
 
 import "../Cards/CardNoLogin.css";
-export const CardNoLogin = () => {
+export const CardNoLogin = (props) => {
   return (
     <Card className="paper">
       <div className="classIcon">
@@ -11,10 +11,10 @@ export const CardNoLogin = () => {
       </div>
       <div className="text-Card">
         <Typography className="Logo-security" variant="h4" color="initial">
-          Mmm... algo no salió bien
+          {props.titleCard}
         </Typography>
         <Typography variant="p1" color="initial">
-          Debes estar autenticado para acceder a esta página
+          {props.parraphCard}
         </Typography>
       </div>
     </Card>

@@ -14,7 +14,10 @@ export const PlaylistNoLogin = () => {
         </Grid>
         <Grid item xs={12} md={12} lg={12} lx={12}>
           <div className="CardNoLogin">
-            <CardNoLogin />
+            <CardNoLogin 
+            titleCard="Mmm... algo no salió bien"
+            parraphCard="Debes estar autenticado para acceder a esta página"
+            />
           </div>
         </Grid>
       </Grid>

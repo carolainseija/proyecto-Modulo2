@@ -26,7 +26,7 @@ const rows = [
   createData('Gingerbread', 356, 16.0, 49, 3.9),
 ];
 
-export const TableSimple = () =>{
+export const TableSimple = (props) =>{
   const classes = useStyles();
 
   return (
@@ -42,10 +42,10 @@ export const TableSimple = () =>{
           </TableRow>
         </TableHead>
         <TableBody>
-       
+        No hay resultados: utiliza la barra de búsqueda para encontrar canciones
             <TableRow >
               <TableCell component="th" scope="row">
-              No hay resultados: utiliza la barra de búsqueda para encontrar canciones
+             {PaymentResponse}
               </TableCell>
             </TableRow>
         </TableBody>
