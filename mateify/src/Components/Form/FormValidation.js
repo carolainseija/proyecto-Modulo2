@@ -1,25 +1,45 @@
 import React, { useState } from "react";
 import "../Form/FormValidation.css";
 import { Button, IconButton, Input } from "@material-ui/core";
+//importo el json para filtrar
+import DateUserJson from '../Funcionalidad/DateUserJson.json';
 
+//const principal que abarca todo con funcion flecha
 export const FormValidation = (props) => {
+  
+  //states iniciados "vacios" para que no haya nada en los inputs
   const [valorDelInput, setValorDelInput] = useState("");
-  const [valorDelInputemail, setValorDelInputemail] = useState("");
+  const [valorDelInputcontraseña, setValorDelInputcontraseña] = useState("");
 
-  const mostrarAlert = (evento) => {
-    if (valorDelInput === "hola" && valorDelInputemail === "chau") {
-      alert(valorDelInput + valorDelInputemail + "CORRECTO");
-    } else {
-      alert("usuario y/o contraseña incorrecta");
+ //onChange evento de los inputs
+const mostrarTextoIngresado = (evento) => {
+  setValorDelInput(evento.target.value);
+};
+const mostrarTextoIngresadocontraseña = (evento) => {
+  setValorDelInputcontraseña(evento.target.value);
+};
+
+
+  const chequeaUsuarios = (element) => {
+    //element.email y passw del json. mostrartexto es el valor  "state actual"
+      if (element.email === valorDelInput && element.password === valorDelInputcontraseña) {
+          return true;
+      } else {
+          return false;
+      }
+  }; 
+  
+  //OnClick evento
+  const validaUsuario = () => {
+    const FilterUser = DateUserJson.filter(chequeaUsuarios);
+    console.log(FilterUser);
+    if (FilterUser.length > 0){
+      alert("usuario correcto");
+    }else {
+      alert("no");
     }
-  };
+  }
 
-  const mostrarTextoIngresado = (evento) => {
-    setValorDelInput(evento.target.value);
-  };
-  const mostrarTextoIngresadoemail = (evento) => {
-    setValorDelInputemail(evento.target.value);
-  };
 
   return (
     <div>
@@ -37,15 +57,17 @@ export const FormValidation = (props) => {
         className="root"
         placeholder="contraseña"
         type="password"
-        onChange={mostrarTextoIngresadoemail}
-        value={valorDelInputemail}
+        onChange={mostrarTextoIngresadocontraseña}
+        value={valorDelInputcontraseña}
       />
      </div>
      
-      <div class="btn-login" onClick={mostrarAlert}>
+      <div class="btn-login" onClick={validaUsuario}>
         <IconButton iconClassName="btn-login center muidocs-icon-custom-github" />{" "}
         COMIENZAR A CREAR PLAYLISTS
       </div>
     </div>
   );
 };
+
+

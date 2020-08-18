@@ -8,9 +8,11 @@ export const Login = () => {
     <div>
       <Grid container>
       <Grid item xs={12} md={12} lg={12} lx={12} className="grid">
+      {/* Componente NavBar*/}
  <NavBar nameLogo="Mateify" />
         </Grid>
         <Grid item xs={12} md={12} lg={12} lx={12}className="grid"></Grid>
+       {/* Componete Form*/}
         <Form />
       </Grid>
     </div>
