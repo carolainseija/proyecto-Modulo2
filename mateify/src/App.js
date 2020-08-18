@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import {Login} from './pages/Login';
 import {CreatorPlayList} from './pages/CreatorPlayList';
-import {PlaylistNoLogin} from './pages/PlaylistNoLogin';
+import {PlaylistNoLogin} from '../src/Components/PagesCondicional/PlaylistNoLogin';
 
 
 export const App = () => {

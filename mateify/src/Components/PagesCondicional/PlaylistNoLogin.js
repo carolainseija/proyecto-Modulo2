@@ -1,9 +1,9 @@
 import React from "react";
 import { Typography, Box, Card, Toolbar, Paper, Grid } from "@material-ui/core";
-import { NavBar } from "../Components/NavBar/NavBar";
-import { TheLogo } from "../Images/TheLogo";
-import ".././pages/PlaylistNoLogin.css";
-import { CardNoLogin } from "../Components/Cards/CardNoLogin";
+import { NavBar } from "../NavBar/NavBar";
+import { TheLogo } from "../../Images/TheLogo";
+import "../../Components/PagesCondicional/PlaylistNoLogin.css";
+import { CardNoLogin } from "../Cards/CardNoLogin";
 
 export const PlaylistNoLogin = () => {
   return (
