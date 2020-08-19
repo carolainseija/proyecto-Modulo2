@@ -41,6 +41,7 @@ export const CreatorPlayList = (props) => {
         descriptionFour="Cant.Votos"
         descriptionSix="Votar"
       />
+   
     </div>
   );
 };
