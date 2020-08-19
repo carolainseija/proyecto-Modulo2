@@ -68,10 +68,13 @@ const mostrarTextoIngresadocontraseña = (evento) => {
         value={valorDelInputcontraseña}
       />
      </div>
-     
+   
       <div class="btn-login" onClick={validaUsuario}>
-        <IconButton iconClassName="btn-login center muidocs-icon-custom-github" />{" "}
-        COMIENZAR A CREAR PLAYLISTS
+        <IconButton iconClassName="btn-login center muidocs-icon-custom-github" 
+        
+        />{"COMIENZAR A CREAR PLAYLISTS"}
+        
+       
       </div>
     </div>
   );
