@@ -21,13 +21,17 @@
   margin-top: 10px !important;
 }
 
-.containerIcon::before {
-  content: url("../../Images/image\ 1.png");
-}
-
 .contenedorBtn {
   margin-top: 15px;
 }
 .container-links {
   margin-top: 40px;
+}
+
+.classIconSmall {
+  width: 80px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #f50057 ;
+
 }

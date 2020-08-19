@@ -1,6 +1,6 @@
 import React from "react";
 import { Typography, Box, Card, Toolbar, Paper } from "@material-ui/core";
-import { IconSmall } from "../Icon/IconSmall";
+import { IconBig } from "../Icon/IconBig";
 
 import "../Cards/CardNoLogin.css";
 export const CardNoLogin = (props) => {
@@ -9,8 +9,8 @@ export const CardNoLogin = (props) => {
       <div>
   <div >
     
-<IconSmall 
-class="classIcon"
+<IconBig 
+class="classIconBig"
 />
 </div>   
       </div>
