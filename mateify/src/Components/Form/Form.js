@@ -73,18 +73,17 @@ export const Form = (props) => {
               lx={12}
               className="grid-three centrar"
             >
-              <div className="contenedorBtnQuestion">
-                <div className="cMain-ontainer-links">
-                  <div className="container-links">
+              <div className="container-Mainsecond">
+                <div className="container-Mainsecond_Links">
+                  <div className="container-Mainsecond_Links_texts">
                     <LinkTexts
-                      className="mar"
-                      classLinkTxt="text-olvidado centrar margin"
+                      classLinkTxt="text-lostPwd"
                       textLink="¿HAS OLVIDADO LA CONTRASEÑA?"
                     />
                   </div>
-                  <div className="container-links">
+                  <div className="container-Mainsecond_Links_texts">
                     <LinkTexts
-                      classLinkTxt="text-cuenta centrar margin"
+                      classLinkTxt="text-account"
                       textLink="¿NO TIENES CUENTA?"
                     />
                   </div>
