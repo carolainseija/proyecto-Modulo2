@@ -2,25 +2,15 @@
   background-color: rgba(37, 218, 37, 0.02);
 }
 
-.rootTwo {
-  padding-bottom: 30px;
-  margin-top: 30px;
-}
 .paperLogin {
   width: 600px;
-  height: 500px;
+  height: 550px;
+  margin-top: 15px;
 }
-
 .grid-root {
   height: 100px;
   justify-content: "center";
   text-align: "center";
-}
-.grid-three {
-  height: 10px;
-}
-.grid-two {
-  height: 100px;
 }
 
 .centrar {
@@ -30,15 +20,14 @@
 .margin {
   margin-top: 10px !important;
 }
-.contenedorBtnQuestion {
-  margin-top: 20px;
-}
-.containerIcon {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-}
 
 .containerIcon::before {
   content: url("../../Images/image\ 1.png");
+}
+
+.contenedorBtn {
+  margin-top: 15px;
+}
+.container-links {
+  margin-top: 40px;
 }

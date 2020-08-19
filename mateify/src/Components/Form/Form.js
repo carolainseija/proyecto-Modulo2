@@ -3,12 +3,13 @@ import React from "react";
 import { ButtonRegister } from "../Buttons/ButtonRegister";
 import "../Form/Form.css";
 
-import { Paper, Grid , Box } from "@material-ui/core";
+import { Paper, Grid, Box } from "@material-ui/core";
 import { FormValidation } from "../Form/FormValidation";
 import { Texts } from "../Typographys/Texts";
 
 import { createMuiTheme } from "@material-ui/core/styles";
 import { TheLogo } from "../../Images/TheLogo";
+import { LinkTexts } from "../Links/LinksTexts";
 
 export const Form = (props) => {
   const theme = createMuiTheme({
@@ -72,20 +73,26 @@ export const Form = (props) => {
               lx={12}
               className="grid-three centrar"
             >
-              <Texts
-                text="¿HAS OLVIDADO LA CONTRASEÑA?"
-                class="text-olvidado centrar margin"
-              />
               <div className="contenedorBtnQuestion">
-                <Texts
-                  text="¿NO TIENES CUENTA?"
-                  class="text-cuenta centrar margin"
-                />
+                <div className="cMain-ontainer-links">
+                  <div className="container-links">
+                    <LinkTexts
+                      className="mar"
+                      classLinkTxt="text-olvidado centrar margin"
+                      textLink="¿HAS OLVIDADO LA CONTRASEÑA?"
+                    />
+                  </div>
+                  <div className="container-links">
+                    <LinkTexts
+                      classLinkTxt="text-cuenta centrar margin"
+                      textLink="¿NO TIENES CUENTA?"
+                    />
+                  </div>
+                </div>
 
-                <ButtonRegister
-                  descriptionButton="Registrate"
-                  className="btn-register"
-                />
+                <div className="contenedorBtn">
+                  <ButtonRegister descriptionButton="Registrate" />
+                </div>
               </div>
             </Grid>
           </form>
