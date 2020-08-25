@@ -13,7 +13,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import ThumbDownAltIcon from '@material-ui/icons/ThumbDownAlt';
 import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
-
+import AddCircleRoundedIcon from '@material-ui/icons/AddCircleRounded';
 const useStyles = makeStyles({
   table: {
     minWidth: 650,
@@ -58,6 +58,9 @@ export const CreatorPlayList = (props) => {
   /*states */
   const [inputValue, setInputValue] = useState("");
   const [listaFiltrada, setListaFiltrada] = useState([]);
+  const [count, setCount] = useState(0);
+  
+
       
   /*onChange */
   const handleInputChange = (e) => {
@@ -101,7 +104,7 @@ export const CreatorPlayList = (props) => {
   const handleAgregarClick = (e, cancion) => {
     console.log("Se ejecuta el handleAgregarClick");
     console.log("Me llega la cancion");
-   alert(cancion[0]);
+   
   };
 
 
@@ -145,7 +148,7 @@ export const CreatorPlayList = (props) => {
              <TableCell align="center">{resultados.album}</TableCell>
              <TableCell align="center">{resultados.duration}</TableCell>
              <TableCell align="center"> <button onClick={(e) => handleAgregarClick(e, cancion)}>
-                Agregar a lista
+                <AddCircleRoundedIcon/>
               </button></TableCell>
              </TableRow>
                ))
@@ -177,13 +180,14 @@ export const CreatorPlayList = (props) => {
         </TableHead>
 
           <TableBody>
+            
           <TableRow>
             {/*Esta es la tabla que debe aparecer si se encuentra un archivo */}
             <TableCell align="center"></TableCell>
              <TableCell align="center"></TableCell>
              <TableCell align="center"></TableCell>
-             <TableCell align="center"></TableCell>
-             <TableCell align="center"><ThumbDownAltIcon/> <ThumbUpAltIcon />  </TableCell>
+             <TableCell align="center">{count}</TableCell>
+             <TableCell align="center"><ThumbDownAltIcon onClick={() => setCount(count - 1)}/> <ThumbUpAltIcon onClick={() => setCount(count + 1)}/>  </TableCell>
              </TableRow>
           </TableBody>
         </Table>
