@@ -35,7 +35,10 @@ export const CreatorPlayList = (props) => {
   /*states */
   const [inputValue, setInputValue] = useState("");
   const [listaFiltrada, setListaFiltrada] = useState([]);
+  const [tuPlaylist, settuPlaylist] = useState([]);
   const [count, setCount] = useState(0);
+
+  
 
   /*onChange */
   const handleInputChange = (e) => {
@@ -58,16 +61,15 @@ export const CreatorPlayList = (props) => {
     }
   };
 
+
   /*evento al presionar Tecla enter */
   const handleInputKeyPress = (e) => {
     if (e.key === "Enter") {
       console.log("Se ejecuta el handleInputKeyPress");
-
       // primero me quedo con los resultados filtrados
       const resultados = cancion.filter(filtrarCanciones);
       console.log("Tenemos el array con los resultados filtrados:");
       console.log(resultados);
-
       // despues actualizo el estado con esos resultados pora poder mostrarlos en el render
       setListaFiltrada(resultados);
       console.log("Se actualiza el estado de las canciones a mostrar");
@@ -76,11 +78,10 @@ export const CreatorPlayList = (props) => {
   };
 
   /*evento OnClick en el boton para agregar a la Playlist */
-  const handleAgregarClick = (e, cancion, resultados) => {
-    console.log("Se ejecuta el handleAgregarClick");
-    console.log("Me llega que boton toque");
-    const cualClick = e.target;
-    console.log(cualClick);
+  const handleAgregarClick = (newSong) => {
+  //copio la cancion que le doy click con los ...
+   settuPlaylist([...tuPlaylist,newSong]);
+    
   };
 
   //Evento onClick para dislike y likes
@@ -140,7 +141,7 @@ export const CreatorPlayList = (props) => {
                         <TableCell align="center">
                           {resultados.artist.name}
                         </TableCell>
-                        <Hidden mdDown>
+                        <Hidden smDown>
                           <TableCell align="center">
                             {resultados.album}
                           </TableCell>
@@ -152,15 +153,15 @@ export const CreatorPlayList = (props) => {
                         </Hidden>
                         <TableCell align="center">
                           {" "}
-                          {/*
-                      <button  onClick={(e) => handleAgregarClick()}>
-                        <AddCircleRoundedIcon  color="secondary"/>
-                      </button>
-                       */}
-                          <AddCircleRoundedIcon
+                          <button
+                            onClick={(e) => handleAgregarClick(resultados)}
+                          >
+                            <AddCircleRoundedIcon color="secondary" />
+                          </button>
+                          {/*}  <AddCircleRoundedIcon
                             onClick={(e) => handleAgregarClick(e, cancion)}
                             color="secondary"
-                          />
+                    /> */}
                         </TableCell>
                       </TableRow>
                     ))
@@ -195,21 +196,25 @@ export const CreatorPlayList = (props) => {
                 </TableHead>
 
                 <TableBody>
-                  <TableRow>
-                    {/*Esta es la tabla que debe aparecer si se encuentra un archivo */}
-                    <TableCell align="center"></TableCell>
-                    <TableCell align="center"></TableCell>
-                    <Hidden mdDown>
-                      <TableCell align="center"></TableCell>
-                    </Hidden>
-                    <Hidden mdDown>
-                      <TableCell align="center">{count}</TableCell>
-                    </Hidden>
-                    <TableCell align="center">
-                      <ThumbDownAltIcon onClick={countDislike} />{" "}
-                      <ThumbUpAltIcon onClick={countLike} />{" "}
-                    </TableCell>
-                  </TableRow>
+                  {tuPlaylist.map((resultados) => (
+                    <TableRow key={resultados.uuid}>
+                      {/*Esta es la tabla que debe aparecer si se encuentra un archivo */}
+                      <TableCell align="center">{resultados.name}</TableCell>
+                      <TableCell align="center">
+                        {resultados.artist.name}
+                      </TableCell>
+                      <Hidden mdDown>
+                        <TableCell align="center">{resultados.album}</TableCell>
+                      </Hidden>
+                      <Hidden mdDown>
+                        <TableCell align="center">{count}</TableCell>
+                      </Hidden>
+                      <TableCell align="center">
+                        <ThumbDownAltIcon onClick={countDislike} />{" "}
+                        <ThumbUpAltIcon onClick={countLike} />{" "}
+                      </TableCell>
+                    </TableRow>
+                  ))}
                 </TableBody>
               </Table>
             </TableContainer>
