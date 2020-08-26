@@ -1,24 +1,15 @@
+.inputSearch {
+  width: 500px;
+  border: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-image: url("../../Images/Vector.png");
+  background-repeat: no-repeat;
+  padding-left: 35px;
+  background-position-y: center;
+  background-position-x: 10px;
+}
+
 .search {
-    position: relative;
-    border-Radius: 50px;
-    background-Color: black;
-    margin-Right: 2px;
-    margin-Left: 0;
-    width: 100%;
- 
-  }
-  .searchIcon {
-    padding: 2px;
-    height: 100%;
-    position: absolute;
-    pointer-Events: none;
-    display: flex;
-    align-items: center;
-    justify-Content: center;
-  }
-  .search:hover {
-   background-color: white;
-  }
-  .inputProps {
-      border: black;
-  }
+  margin-top: 30px;
+}
