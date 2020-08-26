@@ -15,11 +15,18 @@ import ThumbUpAltIcon from "@material-ui/icons/ThumbUpAlt";
 import AddCircleRoundedIcon from "@material-ui/icons/AddCircleRounded";
 import Fab from "@material-ui/core/Fab";
 import AddIcon from "@material-ui/icons/Add";
+import Icon from "@material-ui/core/Icon";
+
+import Hidden from "@material-ui/core/Hidden";
 
 import cancion from "../Components/Funcionalidad/DateSongJson.json";
 const useStyles = makeStyles({
   table: {
     minWidth: 650,
+  },
+  btniconagregar: {
+    borderRadius: 50,
+    fontSize: 10,
   },
 });
 
@@ -69,9 +76,9 @@ export const CreatorPlayList = (props) => {
   };
 
   /*evento OnClick en el boton para agregar a la Playlist */
-  const handleAgregarClick = (e, cancion) => {
+  const handleAgregarClick = (e, cancion, resultados) => {
     console.log("Se ejecuta el handleAgregarClick");
-    console.log("Me llega la cancion");
+    console.log("Me llega que boton toque");
     const cualClick = e.target;
     console.log(cualClick);
   };
@@ -86,100 +93,129 @@ export const CreatorPlayList = (props) => {
 
   return (
     <div>
-      <NavBar nameLogo="Mateify" />
+      <Grid container>
+        <Grid item xs={12} md={12} lg={12} lx={12} className="grid centrar">
+          <NavBar nameLogo="Mateify" />
+        </Grid>
 
-      <Grid item xs={12} md={12} lg={12} lx={12} className="grid centrar">
-        <SearchAndIcon
-          onChange={handleInputChange}
-          placeholder="Buscar"
-          onKeyPress={handleInputKeyPress}
-          value={inputValue}
-        />
-      </Grid>
+        <Grid item xs={12} md={12} lg={12} lx={12} className="grid centrar">
+          <SearchAndIcon
+            onChange={handleInputChange}
+            placeholder="Buscar"
+            onKeyPress={handleInputKeyPress}
+            value={inputValue}
+          />
+        </Grid>
+        <Grid item xs={12} md={12} lg={12} lx={12} className="grid centrar">
+          <div>
+            <TableContainer component={Paper}>
+              <Table
+                className={classes.table}
+                size="small"
+                aria-label="a dense table"
+              >
+                <TableHead>Resultados</TableHead>
 
-      <div>
-        <TableContainer component={Paper}>
-          <Table
-            className={classes.table}
-            size="small"
-            aria-label="a dense table"
-          >
-            <TableHead>Resultados</TableHead>
+                <TableHead>
+                  <TableRow>
+                    <TableCell align="center">Nombre</TableCell>
+                    <TableCell align="center">Artista</TableCell>
+                    <Hidden mdDown>
+                      <TableCell align="center">Album</TableCell>
+                    </Hidden>
+                    <Hidden mdDown>
+                      <TableCell align="center">Duracion</TableCell>
+                    </Hidden>
+                    <TableCell align="center">Agregar</TableCell>
+                  </TableRow>
+                </TableHead>
 
-            <TableHead>
-              <TableRow>
-                <TableCell align="center">Nombre</TableCell>
-                <TableCell align="center">Artista</TableCell>
-                <TableCell align="center">Album</TableCell>
-                <TableCell align="center">Duracion</TableCell>
-                <TableCell align="center">Agregar</TableCell>
-              </TableRow>
-            </TableHead>
-
-            <TableBody>
-              {
-                // recorro la lista filtrada que tengo en el estado
-                listaFiltrada.map((resultados) => (
-                  <TableRow key={resultados.uuid}>
-                    {/*Esta es la tabla que debe aparecer si se encuentra un archivo */}
-                    <TableCell align="center">{resultados.name}</TableCell>
-                    <TableCell align="center">
-                      {resultados.artist.name}
-                    </TableCell>
-                    <TableCell align="center">{resultados.album}</TableCell>
-                    <TableCell align="center">{resultados.duration}</TableCell>
-                    <TableCell align="center">
-                      {" "}
-                      <button onClick={(e) => handleAgregarClick(e, cancion)}>
-                        <Fab size="small" color="secondary">
-                          <AddIcon />
-                        </Fab>
+                <TableBody>
+                  {
+                    // recorro la lista filtrada que tengo en el estado
+                    listaFiltrada.map((resultados) => (
+                      <TableRow key={resultados.uuid}>
+                        {/*Esta es la tabla que debe aparecer si se encuentra un archivo */}
+                        <TableCell align="center">{resultados.name}</TableCell>
+                        <TableCell align="center">
+                          {resultados.artist.name}
+                        </TableCell>
+                        <Hidden mdDown>
+                          <TableCell align="center">
+                            {resultados.album}
+                          </TableCell>
+                        </Hidden>
+                        <Hidden mdDown>
+                          <TableCell align="center">
+                            {resultados.duration}
+                          </TableCell>
+                        </Hidden>
+                        <TableCell align="center">
+                          {" "}
+                          {/*
+                      <button  onClick={(e) => handleAgregarClick()}>
+                        <AddCircleRoundedIcon  color="secondary"/>
                       </button>
+                       */}
+                          <AddCircleRoundedIcon
+                            onClick={(e) => handleAgregarClick(e, cancion)}
+                            color="secondary"
+                          />
+                        </TableCell>
+                      </TableRow>
+                    ))
+                  }
+                </TableBody>
+              </Table>
+            </TableContainer>
+          </div>
+          <br></br>
+          <br></br>
+          <br></br>
+          <div>
+            <TableContainer>
+              <Table
+                className={classes.table}
+                size="small"
+                aria-label="a dense table"
+              >
+                <TableHead>Tu Playlist</TableHead>
+                <TableHead>
+                  <TableRow>
+                    <TableCell align="center">Nombre</TableCell>
+                    <TableCell align="center">Artista</TableCell>
+                    <Hidden mdDown>
+                      <TableCell align="center">Album</TableCell>
+                    </Hidden>
+                    <Hidden mdDown>
+                      <TableCell align="center">Cant.Votos</TableCell>
+                    </Hidden>
+                    <TableCell align="center">Votar</TableCell>
+                  </TableRow>
+                </TableHead>
+
+                <TableBody>
+                  <TableRow>
+                    {/*Esta es la tabla que debe aparecer si se encuentra un archivo */}
+                    <TableCell align="center"></TableCell>
+                    <TableCell align="center"></TableCell>
+                    <Hidden mdDown>
+                      <TableCell align="center"></TableCell>
+                    </Hidden>
+                    <Hidden mdDown>
+                      <TableCell align="center">{count}</TableCell>
+                    </Hidden>
+                    <TableCell align="center">
+                      <ThumbDownAltIcon onClick={countDislike} />{" "}
+                      <ThumbUpAltIcon onClick={countLike} />{" "}
                     </TableCell>
                   </TableRow>
-                ))
-              }
-            </TableBody>
-          </Table>
-        </TableContainer>
-      </div>
-      <br></br>
-      <br></br>
-      <br></br>
-      <div>
-        <TableContainer>
-          <Table
-            className={classes.table}
-            size="small"
-            aria-label="a dense table"
-          >
-            <TableHead>Tu Playlist</TableHead>
-            <TableHead>
-              <TableRow>
-                <TableCell align="center">Nombre</TableCell>
-                <TableCell align="center">Artista</TableCell>
-                <TableCell align="center">Album</TableCell>
-                <TableCell align="center">Duracion</TableCell>
-                <TableCell align="center">Votar</TableCell>
-              </TableRow>
-            </TableHead>
-
-            <TableBody>
-              <TableRow>
-                {/*Esta es la tabla que debe aparecer si se encuentra un archivo */}
-                <TableCell align="center"></TableCell>
-                <TableCell align="center"></TableCell>
-                <TableCell align="center"></TableCell>
-                <TableCell align="center">{count}</TableCell>
-                <TableCell align="center">
-                  <ThumbDownAltIcon onClick={countDislike} />{" "}
-                  <ThumbUpAltIcon onClick={countLike} />{" "}
-                </TableCell>
-              </TableRow>
-            </TableBody>
-          </Table>
-        </TableContainer>
-      </div>
+                </TableBody>
+              </Table>
+            </TableContainer>
+          </div>
+        </Grid>
+      </Grid>
     </div>
   );
 };
