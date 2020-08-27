@@ -13,13 +13,9 @@ import Paper from "@material-ui/core/Paper";
 import ThumbDownAltIcon from "@material-ui/icons/ThumbDownAlt";
 import ThumbUpAltIcon from "@material-ui/icons/ThumbUpAlt";
 import AddCircleRoundedIcon from "@material-ui/icons/AddCircleRounded";
-import Fab from "@material-ui/core/Fab";
-import AddIcon from "@material-ui/icons/Add";
-import Icon from "@material-ui/core/Icon";
-
 import Hidden from "@material-ui/core/Hidden";
-
 import cancion from "../Components/Funcionalidad/DateSongJson.json";
+
 const useStyles = makeStyles({
   table: {
     minWidth: 650,
@@ -27,6 +23,9 @@ const useStyles = makeStyles({
   btniconagregar: {
     borderRadius: 50,
     fontSize: 10,
+  },
+  divTableTwo: {
+    marginTop: 100,
   },
 });
 
@@ -37,8 +36,6 @@ export const CreatorPlayList = (props) => {
   const [listaFiltrada, setListaFiltrada] = useState([]);
   const [tuPlaylist, settuPlaylist] = useState([]);
   const [count, setCount] = useState(0);
-
-  
 
   /*onChange */
   const handleInputChange = (e) => {
@@ -61,7 +58,6 @@ export const CreatorPlayList = (props) => {
     }
   };
 
-
   /*evento al presionar Tecla enter */
   const handleInputKeyPress = (e) => {
     if (e.key === "Enter") {
@@ -79,9 +75,8 @@ export const CreatorPlayList = (props) => {
 
   /*evento OnClick en el boton para agregar a la Playlist */
   const handleAgregarClick = (newSong) => {
-  //copio la cancion que le doy click con los ...
-   settuPlaylist([...tuPlaylist,newSong]);
-    
+    //copio la cancion que le doy click con los ...
+    settuPlaylist([...tuPlaylist, newSong]);
   };
 
   //Evento onClick para dislike y likes
@@ -98,7 +93,6 @@ export const CreatorPlayList = (props) => {
         <Grid item xs={12} md={12} lg={12} lx={12} className="grid centrar">
           <NavBar nameLogo="Mateify" />
         </Grid>
-
         <Grid item xs={12} md={12} lg={12} lx={12} className="grid centrar">
           <SearchAndIcon
             onChange={handleInputChange}
@@ -116,7 +110,6 @@ export const CreatorPlayList = (props) => {
                 aria-label="a dense table"
               >
                 <TableHead>Resultados</TableHead>
-
                 <TableHead>
                   <TableRow>
                     <TableCell align="center">Nombre</TableCell>
@@ -130,7 +123,6 @@ export const CreatorPlayList = (props) => {
                     <TableCell align="center">Agregar</TableCell>
                   </TableRow>
                 </TableHead>
-
                 <TableBody>
                   {
                     // recorro la lista filtrada que tengo en el estado
@@ -153,15 +145,10 @@ export const CreatorPlayList = (props) => {
                         </Hidden>
                         <TableCell align="center">
                           {" "}
-                          <button
+                          <AddCircleRoundedIcon
                             onClick={(e) => handleAgregarClick(resultados)}
-                          >
-                            <AddCircleRoundedIcon color="secondary" />
-                          </button>
-                          {/*}  <AddCircleRoundedIcon
-                            onClick={(e) => handleAgregarClick(e, cancion)}
                             color="secondary"
-                    /> */}
+                          />
                         </TableCell>
                       </TableRow>
                     ))
@@ -170,10 +157,7 @@ export const CreatorPlayList = (props) => {
               </Table>
             </TableContainer>
           </div>
-          <br></br>
-          <br></br>
-          <br></br>
-          <div>
+          <div className={classes.divTableTwo}>
             <TableContainer>
               <Table
                 className={classes.table}
@@ -194,7 +178,6 @@ export const CreatorPlayList = (props) => {
                     <TableCell align="center">Votar</TableCell>
                   </TableRow>
                 </TableHead>
-
                 <TableBody>
                   {tuPlaylist.map((resultados) => (
                     <TableRow key={resultados.uuid}>

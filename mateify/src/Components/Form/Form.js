@@ -1,12 +1,9 @@
 import React from "react";
-
 import { ButtonRegister } from "../Buttons/ButtonRegister";
 import "../Form/Form.css";
-
 import { Paper, Grid, Box } from "@material-ui/core";
 import { FormValidation } from "../Form/FormValidation";
 import { Texts } from "../Typographys/Texts";
-
 import { createMuiTheme } from "@material-ui/core/styles";
 import { TheLogo } from "../../Images/TheLogo";
 import { LinkTexts } from "../Links/LinksTexts";
@@ -61,10 +58,8 @@ export const Form = (props) => {
           >
             <Texts text="Ingresar" />
           </Grid>
-
           <form className="rootTwo" noValidate autoComplete="on">
             <FormValidation />
-
             <Grid
               item
               xs={12}
@@ -88,7 +83,6 @@ export const Form = (props) => {
                     />
                   </div>
                 </div>
-
                 <div className="contenedorBtn">
                   <ButtonRegister descriptionButton="Registrate" />
                 </div>

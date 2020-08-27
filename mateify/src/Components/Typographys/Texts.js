@@ -1,6 +1,5 @@
 import React from "react";
 import { Typography } from "@material-ui/core";
-
 import "../Typographys/Texts.css";
 
 export const Texts = (props) => {

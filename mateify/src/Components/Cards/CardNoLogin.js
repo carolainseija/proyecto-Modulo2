@@ -1,8 +1,8 @@
 import React from "react";
 import { Typography, Box, Card, Toolbar, Paper } from "@material-ui/core";
 import { IconBig } from "../Icon/IconBig";
-
 import "../Cards/CardNoLogin.css";
+
 export const CardNoLogin = (props) => {
   return (
     <Card className="paper">
